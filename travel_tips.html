@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北京五一劳动节旅行攻略 2026</title>
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-light: #DBEAFE;
+            --accent: #F59E0B;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --text: #1E293B;
+            --text-light: #64748B;
+            --border: #E2E8F0;
+            --day1: #EF4444;
+            --day2: #10B981;
+            --day3: #3B82F6;
+            --day4: #8B5CF6;
+            --day5: #F97316;
+            --radius: 16px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+            --shadow-lg: 0 4px 6px rgba(0,0,0,0.06), 0 10px 30px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #1E3A5F 0%, #2563EB 50%, #7C3AED 100%);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 12px; position: relative; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; position: relative; }
+        .hero .dates {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 8px 24px;
+            border-radius: 30px;
+            margin-top: 16px;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        .hero .producer {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            position: relative;
+        }
+
+        /* Section */
+        .section { padding: 48px 0; }
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* Weather Cards */
+        .weather-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        .weather-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            padding: 28px 24px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .weather-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .weather-card .weather-icon { font-size: 3rem; margin-bottom: 12px; }
+        .weather-card .date { font-size: 0.85rem; color: var(--text-light); margin-bottom: 4px; }
+        .weather-card .day-label { font-weight: 600; font-size: 1.1rem; margin-bottom: 12px; }
+        .weather-card .temp {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .weather-card .temp small { font-size: 1rem; color: var(--text-light); font-weight: 400; }
+        .weather-card .desc { color: var(--text-light); font-size: 0.9rem; }
+
+        /* Tips */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .tip-item {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            box-shadow: var(--shadow);
+        }
+        .tip-item .tip-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--primary-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .tip-item .tip-text h4 { font-size: 0.95rem; margin-bottom: 4px; }
+        .tip-item .tip-text p { font-size: 0.85rem; color: var(--text-light); }
+
+        /* Day Section */
+        .day-section { margin-bottom: 48px; }
+        .day-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--border);
+        }
+        .day-badge {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .day-badge .num { font-size: 1.4rem; line-height: 1; }
+        .day-badge .label { font-size: 0.65rem; opacity: 0.9; }
+        .day-header .day-info h3 { font-size: 1.25rem; font-weight: 700; }
+        .day-header .day-info p { font-size: 0.9rem; color: var(--text-light); }
+
+        /* Attraction Cards */
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+        .attraction-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .attraction-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+        .attraction-card .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background: #E2E8F0;
+        }
+        .attraction-card .card-body { padding: 20px; }
+        .attraction-card .card-body h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .attraction-card .card-body .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        .attraction-card .card-body .card-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .card-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.78rem;
+            color: var(--text-light);
+            background: var(--bg);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        /* Route Info */
+        .route-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 16px 20px;
+            background: var(--card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+        .route-info .route-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        .route-segment {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .route-seg-name {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text);
+            min-width: 140px;
+        }
+        .route-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+        .taxi-btn, .transit-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 500;
+            transition: opacity 0.2s, transform 0.1s;
+            white-space: nowrap;
+        }
+        .taxi-btn { background: linear-gradient(135deg, #10B981, #059669); }
+        .transit-btn { background: linear-gradient(135deg, #3B82F6, #2563EB); }
+        .taxi-btn:hover, .transit-btn:hover { opacity: 0.9; transform: scale(1.02); }
+        .taxi-btn svg { width: 14px; height: 14px; }
+
+        /* Map */
+        .map-section { padding: 48px 0; }
+        #map-container {
+            width: 100%;
+            height: 500px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+            background: #E2E8F0;
+        }
+        .map-legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            padding: 16px 20px;
+            background: var(--card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .map-actions {
+            margin-top: 16px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .map-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+        .map-btn:hover { transform: scale(1.02); opacity: 0.9; }
+        .map-btn-primary {
+            background: linear-gradient(135deg, #2563EB, #7C3AED);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Map Error */
+        .map-error {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Day Filter */
+        .day-filter {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 16px;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            border-radius: 10px;
+            border: 1.5px solid var(--border);
+            background: var(--card);
+            color: var(--text-light);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .filter-btn:hover {
+            border-color: var(--btn-color, var(--primary));
+            color: var(--btn-color, var(--primary));
+            background: var(--bg);
+        }
+        .filter-btn.active {
+            background: var(--btn-color, var(--primary));
+            border-color: var(--btn-color, var(--primary));
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 60px 20px 40px; }
+            .hero h1 { font-size: 1.8rem; }
+            .weather-grid { grid-template-columns: 1fr; }
+            .attractions-grid { grid-template-columns: 1fr; }
+            .day-header { flex-direction: column; align-items: flex-start; }
+            .route-info { flex-direction: column; align-items: flex-start; }
+            #map-container { height: 350px; }
+            .map-legend { flex-direction: column; gap: 8px; }
+        }
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .attractions-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+    <h1>北京五一劳动节旅行攻略</h1>
+    <p>5天4晚深度游，探索千年古都的魅力</p>
+    <div class="dates">2026年5月1日 - 5月5日</div>
+    <div class="producer">北京广播电视台出品</div>
+</header>
+
+<!-- Weather Section -->
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <span class="icon" style="background:#FEF3C7;color:#F59E0B;">&#9728;</span>
+            天气预报
+        </div>
+        <div class="weather-grid">
+            <div class="weather-card">
+                <div class="weather-icon">&#9728;&#65039;</div>
+                <div class="date">2026年5月1日 周五</div>
+                <div class="day-label">劳动节</div>
+                <div class="temp">26&deg; <small>/ 14&deg;</small></div>
+                <div class="desc">晴 | 南风 1-3级</div>
+            </div>
+            <div class="weather-card">
+                <div class="weather-icon">&#9925;</div>
+                <div class="date">2026年5月2日 周六</div>
+                <div class="day-label">假期第二天</div>
+                <div class="temp">25&deg; <small>/ 15&deg;</small></div>
+                <div class="desc">多云 | 南风 1-3级</div>
+            </div>
+            <div class="weather-card">
+                <div class="weather-icon">&#9728;&#65039;</div>
+                <div class="date">2026年5月3日 周日</div>
+                <div class="day-label">假期第三天</div>
+                <div class="temp">28&deg; <small>/ 16&deg;</small></div>
+                <div class="desc">晴转多云 | 西北风 1-3级</div>
+            </div>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-light);margin-top:12px;text-align:center;">* 天气数据为北京5月历史气温参考，出行前请关注最新天气预报</p>
+    </div>
+</section>
+
+<!-- Travel Tips -->
+<section class="section" style="padding-top:0;">
+    <div class="container">
+        <div class="section-title">
+            <span class="icon" style="background:#DBEAFE;color:#2563EB;">&#128161;</span>
+            旅行小贴士
+        </div>
+        <div class="tips-grid">
+            <div class="tip-item">
+                <div class="tip-icon">&#128084;</div>
+                <div class="tip-text">
+                    <h4>穿衣建议</h4>
+                    <p>五月北京昼夜温差较大（14-28&#176;C），建议穿轻薄外套+短袖，早晚注意保暖</p>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">&#127915;</div>
+                <div class="tip-text">
+                    <h4>防晒必备</h4>
+                    <p>紫外线较强，携带防晒霜、墨镜、遮阳帽，长城等户外景点尤其注意</p>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">&#127903;</div>
+                <div class="tip-text">
+                    <h4>提前预约</h4>
+                    <p>故宫、长城等热门景点需提前在官方平台预约门票，五一期间尤其紧张</p>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">&#128663;</div>
+                <div class="tip-text">
+                    <h4>交通出行</h4>
+                    <p>建议地铁+打车组合出行，避开早晚高峰。长城建议早出发避开人流</p>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">&#128247;</div>
+                <div class="tip-text">
+                    <h4>最佳拍照</h4>
+                    <p>景山万春亭拍故宫全景、天坛祈年殿、长城雄关是必打卡的摄影点</p>
+                </div>
+            </div>
+            <div class="tip-item">
+                <div class="tip-icon">&#127860;</div>
+                <div class="tip-text">
+                    <h4>美食推荐</h4>
+                    <p>烤鸭、炸酱面、卤煮、豆汁儿，南锣鼓巷和王府井小吃街可以大快朵颐</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Itinerary -->
+<section class="section" style="padding-top:0;">
+    <div class="container">
+        <div class="section-title">
+            <span class="icon" style="background:#F3E8FF;color:#8B5CF6;">&#128197;</span>
+            每日行程安排
+        </div>
+
+        <!-- Day 1 -->
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-badge" style="background:var(--day1);">
+                    <span class="num">01</span>
+                    <span class="label">DAY</span>
+                </div>
+                <div class="day-info">
+                    <h3>皇城中轴线 &mdash; 5月1日</h3>
+                    <p>天安门广场 &rarr; 故宫博物院 &rarr; 景山公园</p>
+                </div>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/17a36a737908810a310387c7d53e878a" alt="天安门广场" loading="lazy">
+                    <div class="card-body">
+                        <h4>天安门广场</h4>
+                        <p class="card-desc">世界上最大的城市中心广场，中国的国家象征。清晨可以观看庄严的升旗仪式，感受国家的庄重与神圣。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 东城区东长安街</span>
+                            <span class="card-tag">&#9201; 建议1.5h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/2f968490d105bb2741e17f90b85c6b79" alt="故宫博物院" loading="lazy">
+                    <div class="card-body">
+                        <h4>故宫博物院</h4>
+                        <p class="card-desc">明清两代皇家宫殿，世界现存规模最大的宫殿建筑群。AAAAA级景区，收藏珍贵文物180余万件。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 景山前街4号</span>
+                            <span class="card-tag">&#9201; 建议3-4h</span>
+                            <span class="card-tag">&#11088; 4.9分</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/10eb01af2fd301e54e50d42ea636ccef" alt="景山公园" loading="lazy">
+                    <div class="card-body">
+                        <h4>景山公园</h4>
+                        <p class="card-desc">登上万春亭可俯瞰故宫全景和北京中轴线，是拍摄故宫金顶的最佳位置。明崇祯帝殉国之处。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 景山西街44号</span>
+                            <span class="card-tag">&#9201; 建议1.5h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="route-info">
+                <span class="route-label">&#128747; 景点间出行：</span>
+                <div class="route-segment">
+                    <span class="route-seg-name">天安门 &rarr; 故宫</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.903182&slon=116.397755&sname=%E5%A4%A9%E5%AE%89%E9%97%A8%E5%B9%BF%E5%9C%BA&dlon=116.397029&dlat=39.917839&dname=%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.903182&slon=116.397755&sname=%E5%A4%A9%E5%AE%89%E9%97%A8%E5%B9%BF%E5%9C%BA&dlon=116.397029&dlat=39.917839&dname=%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2">&#128661; 打车</a>
+                    </div>
+                </div>
+                <div class="route-segment">
+                    <span class="route-seg-name">故宫 &rarr; 景山公园</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.917839&slon=116.397029&sname=%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2&dlon=116.396551&dlat=39.925875&dname=%E6%99%AF%E5%B1%B1%E5%85%AC%E5%9B%AD&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.917839&slon=116.397029&sname=%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2&dlon=116.396551&dlat=39.925875&dname=%E6%99%AF%E5%B1%B1%E5%85%AC%E5%9B%AD">&#128661; 打车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-badge" style="background:var(--day2);">
+                    <span class="num">02</span>
+                    <span class="label">DAY</span>
+                </div>
+                <div class="day-info">
+                    <h3>传统文化体验 &mdash; 5月2日</h3>
+                    <p>天坛公园 &rarr; 南锣鼓巷 &rarr; 什刹海</p>
+                </div>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/561ebdb222a6f17913f1bbd1062c3d93" alt="天坛公园" loading="lazy">
+                    <div class="card-body">
+                        <h4>天坛公园</h4>
+                        <p class="card-desc">明清皇帝祭天祈谷的场所，祈年殿是北京标志性建筑之一。回音壁、圜丘等建筑展现古代建筑智慧。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 天坛东里甲1号</span>
+                            <span class="card-tag">&#9201; 建议2-3h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/6aa94c24640267a56c22af0b9629030a" alt="南锣鼓巷" loading="lazy">
+                    <div class="card-body">
+                        <h4>南锣鼓巷</h4>
+                        <p class="card-desc">北京最古老的街区之一，全长787米。两侧胡同文化丰富，汇集特色小店、文创商品和各种美食小吃。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 东城区南锣鼓巷</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/dd97c0390e296f47a20b72063ec86990" alt="什刹海" loading="lazy">
+                    <div class="card-body">
+                        <h4>什刹海</h4>
+                        <p class="card-desc">老北京风情的缩影，由前海、后海、西海组成。傍晚可以沿湖散步，坐摇橹船赏景，或逛后海酒吧街。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 地安门西大街49号</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="route-info">
+                <span class="route-label">&#128747; 景点间出行：</span>
+                <div class="route-segment">
+                    <span class="route-seg-name">天坛 &rarr; 南锣鼓巷</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.881913&slon=116.410829&sname=%E5%A4%A9%E5%9D%9B%E5%85%AC%E5%9B%AD&dlon=116.403145&dlat=39.936302&dname=%E5%8D%97%E9%94%A3%E9%BC%93%E5%B7%B7&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.881913&slon=116.410829&sname=%E5%A4%A9%E5%9D%9B%E5%85%AC%E5%9B%AD&dlon=116.403145&dlat=39.936302&dname=%E5%8D%97%E9%94%A3%E9%BC%93%E5%B7%B7">&#128661; 打车</a>
+                    </div>
+                </div>
+                <div class="route-segment">
+                    <span class="route-seg-name">南锣鼓巷 &rarr; 什刹海</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.936302&slon=116.403145&sname=%E5%8D%97%E9%94%A3%E9%BC%93%E5%B7%B7&dlon=116.395411&dlat=39.939538&dname=%E4%BB%80%E5%88%B9%E6%B5%B7&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.936302&slon=116.403145&sname=%E5%8D%97%E9%94%A3%E9%BC%93%E5%B7%B7&dlon=116.395411&dlat=39.939538&dname=%E4%BB%80%E5%88%B9%E6%B5%B7">&#128661; 打车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-badge" style="background:var(--day3);">
+                    <span class="num">03</span>
+                    <span class="label">DAY</span>
+                </div>
+                <div class="day-info">
+                    <h3>长城远郊游 &mdash; 5月3日</h3>
+                    <p>八达岭长城 &rarr; 明十三陵 &rarr; 国家体育场(鸟巢)</p>
+                </div>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/67fedede4e30d83372fe0f94533ad06b" alt="八达岭长城" loading="lazy">
+                    <div class="card-body">
+                        <h4>八达岭长城</h4>
+                        <p class="card-desc">万里长城最著名的一段，"不到长城非好汉"。AAAAA级景区，北眺八达岭关沟，雄伟壮丽。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 延庆区G6京藏高速58号出口</span>
+                            <span class="card-tag">&#9201; 建议3-4h</span>
+                            <span class="card-tag">&#11088; 4.7分</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/14c1303b05679587e240a50828e8dae9" alt="明十三陵" loading="lazy">
+                    <div class="card-body">
+                        <h4>明十三陵景区</h4>
+                        <p class="card-desc">明朝十三位皇帝的陵寝建筑群，世界文化遗产。其中定陵地宫是唯一被发掘开放的皇帝陵墓。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 昌平区十三陵镇</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                            <span class="card-tag">&#11088; 4.7分</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/55957b6116c6ee3c8e843ad9051ec39f" alt="国家体育场(鸟巢)" loading="lazy">
+                    <div class="card-body">
+                        <h4>国家体育场(鸟巢)</h4>
+                        <p class="card-desc">2008年北京奥运会主场馆，独特的钢结构外观如同鸟巢般壮观。夜景灯光更是美不胜收。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 国家体育场南路1号</span>
+                            <span class="card-tag">&#9201; 建议1.5h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="route-info">
+                <span class="route-label">&#128747; 景点间出行：</span>
+                <div class="route-segment">
+                    <span class="route-seg-name">长城 &rarr; 明十三陵</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=40.356188&slon=116.016802&sname=%E5%85%AB%E8%BE%BE%E5%B2%AD%E9%95%BF%E5%9F%8E&dlon=116.235741&dlat=40.280532&dname=%E6%98%8E%E5%8D%81%E4%B8%89%E9%99%B5%E6%99%AF%E5%8C%BA&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=40.356188&slon=116.016802&sname=%E5%85%AB%E8%BE%BE%E5%B2%AD%E9%95%BF%E5%9F%8E&dlon=116.235741&dlat=40.280532&dname=%E6%98%8E%E5%8D%81%E4%B8%89%E9%99%B5%E6%99%AF%E5%8C%BA">&#128661; 打车</a>
+                    </div>
+                </div>
+                <div class="route-segment">
+                    <span class="route-seg-name">明十三陵 &rarr; 鸟巢</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=40.280532&slon=116.235741&sname=%E6%98%8E%E5%8D%81%E4%B8%89%E9%99%B5%E6%99%AF%E5%8C%BA&dlon=116.394931&dlat=39.993758&dname=%E5%9B%BD%E5%AE%B6%E4%BD%93%E8%82%B2%E5%9C%BA&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=40.280532&slon=116.235741&sname=%E6%98%8E%E5%8D%81%E4%B8%89%E9%99%B5%E6%99%AF%E5%8C%BA&dlon=116.394931&dlat=39.993758&dname=%E5%9B%BD%E5%AE%B6%E4%BD%93%E8%82%B2%E5%9C%BA(%E9%B8%9F%E5%B7%A2)">&#128661; 打车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-badge" style="background:var(--day4);">
+                    <span class="num">04</span>
+                    <span class="label">DAY</span>
+                </div>
+                <div class="day-info">
+                    <h3>皇家园林 &mdash; 5月4日</h3>
+                    <p>颐和园 &rarr; 圆明园遗址公园 &rarr; 恭王府</p>
+                </div>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/a4b326f43a84d36b581d7f6e856fe858" alt="颐和园" loading="lazy">
+                    <div class="card-body">
+                        <h4>颐和园</h4>
+                        <p class="card-desc">中国现存规模最大的皇家园林，以昆明湖和万寿山为主体。长廊彩画、佛香阁、十七孔桥闻名于世。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 新建宫门路19号</span>
+                            <span class="card-tag">&#9201; 建议3h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/0c8257320e8c8a771ef6aef1cb358483" alt="圆明园遗址公园" loading="lazy">
+                    <div class="card-body">
+                        <h4>圆明园遗址公园</h4>
+                        <p class="card-desc">曾经的"万园之园"，虽经战火毁坏，大水法等残存遗迹依然震撼人心，是不可忘却的历史见证。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 清华西路28号</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/e242ed1956e6d775a8912cfd3934169b" alt="恭王府" loading="lazy">
+                    <div class="card-body">
+                        <h4>恭王府</h4>
+                        <p class="card-desc">清代规模最大、保存最完整的王府建筑群。曾为和珅私宅，"一座恭王府，半部清朝史"。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 前海西街17号</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="route-info">
+                <span class="route-label">&#128747; 景点间出行：</span>
+                <div class="route-segment">
+                    <span class="route-seg-name">颐和园 &rarr; 圆明园</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.999617&slon=116.275179&sname=%E9%A2%90%E5%92%8C%E5%9B%AD&dlon=116.309879&dlat=39.999581&dname=%E5%9C%86%E6%98%8E%E5%9B%AD%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.999617&slon=116.275179&sname=%E9%A2%90%E5%92%8C%E5%9B%AD&dlon=116.309879&dlat=39.999581&dname=%E5%9C%86%E6%98%8E%E5%9B%AD%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD">&#128661; 打车</a>
+                    </div>
+                </div>
+                <div class="route-segment">
+                    <span class="route-seg-name">圆明园 &rarr; 恭王府</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.999581&slon=116.309879&sname=%E5%9C%86%E6%98%8E%E5%9B%AD%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&dlon=116.386442&dlat=39.936428&dname=%E6%81%AD%E7%8E%8B%E5%BA%9C&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.999581&slon=116.309879&sname=%E5%9C%86%E6%98%8E%E5%9B%AD%E9%81%97%E5%9D%80%E5%85%AC%E5%9B%AD&dlon=116.386442&dlat=39.936428&dname=%E6%81%AD%E7%8E%8B%E5%BA%9C">&#128661; 打车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="day-section">
+            <div class="day-header">
+                <div class="day-badge" style="background:var(--day5);">
+                    <span class="num">05</span>
+                    <span class="label">DAY</span>
+                </div>
+                <div class="day-info">
+                    <h3>休闲购物日 &mdash; 5月5日</h3>
+                    <p>北海公园 &rarr; 王府井步行街 &rarr; 三里屯太古里</p>
+                </div>
+            </div>
+            <div class="attractions-grid">
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/68a92863a790f69d2221f7c53906c8c2" alt="北海公园" loading="lazy">
+                    <div class="card-body">
+                        <h4>北海公园</h4>
+                        <p class="card-desc">中国现存最古老的皇家园林之一，琼华岛上的白塔是标志性建筑。可以泛舟湖上，感受"让我们荡起双桨"。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 文津街1号</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/c5d1f954b76563325f7a9d7433b66167" alt="王府井步行街" loading="lazy">
+                    <div class="card-body">
+                        <h4>王府井步行街</h4>
+                        <p class="card-desc">中国最著名的商业街之一，汇集了百货大楼、品牌旗舰店和各种美食，是购物和品尝北京小吃的好去处。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 王府井大街</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="attraction-card">
+                    <img class="card-img" src="http://store.is.autonavi.com/showpic/68c3425d5f6f84e9c25445c0d49b4238" alt="三里屯太古里" loading="lazy">
+                    <div class="card-body">
+                        <h4>三里屯太古里</h4>
+                        <p class="card-desc">北京最时尚的潮流地标，国际品牌旗舰店云集，是年轻人聚集的时尚消费中心，适合傍晚逛街用餐。</p>
+                        <div class="card-meta">
+                            <span class="card-tag">&#128205; 三里屯路11号</span>
+                            <span class="card-tag">&#9201; 建议2h</span>
+                            <span class="card-tag">&#11088; 4.9分</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="route-info">
+                <span class="route-label">&#128747; 景点间出行：</span>
+                <div class="route-segment">
+                    <span class="route-seg-name">北海公园 &rarr; 王府井</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.928775&slon=116.391802&sname=%E5%8C%97%E6%B5%B7%E5%85%AC%E5%9B%AD&dlon=116.411104&dlat=39.916917&dname=%E7%8E%8B%E5%BA%9C%E4%BA%95%E6%AD%A5%E8%A1%8C%E8%A1%97&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.928775&slon=116.391802&sname=%E5%8C%97%E6%B5%B7%E5%85%AC%E5%9B%AD&dlon=116.411104&dlat=39.916917&dname=%E7%8E%8B%E5%BA%9C%E4%BA%95%E6%AD%A5%E8%A1%8C%E8%A1%97">&#128661; 打车</a>
+                    </div>
+                </div>
+                <div class="route-segment">
+                    <span class="route-seg-name">王府井 &rarr; 三里屯</span>
+                    <div class="route-btns">
+                        <a class="transit-btn" href="amapuri://route/plan?sourceApplication=amapplatform&slat=39.916917&slon=116.411104&sname=%E7%8E%8B%E5%BA%9C%E4%BA%95%E6%AD%A5%E8%A1%8C%E8%A1%97&dlon=116.453990&dlat=39.934871&dname=%E4%B8%89%E9%87%8C%E5%B1%AF%E5%A4%AA%E5%8F%A4%E9%87%8C&t=1">&#128643; 地铁/公交</a>
+                        <a class="taxi-btn" href="amapuri://drive/takeTaxi?sourceApplication=amapplatform&slat=39.916917&slon=116.411104&sname=%E7%8E%8B%E5%BA%9C%E4%BA%95%E6%AD%A5%E8%A1%8C%E8%A1%97&dlon=116.453990&dlat=39.934871&dname=%E4%B8%89%E9%87%8C%E5%B1%AF%E5%A4%AA%E5%8F%A4%E9%87%8C">&#128661; 打车</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="map-section">
+    <div class="container">
+        <div class="section-title">
+            <span class="icon" style="background:#DCFCE7;color:#16A34A;">&#128506;</span>
+            旅游路线地图
+        </div>
+        <div class="day-filter">
+            <button class="filter-btn active" data-day="-1" onclick="filterDay(-1)">全部行程</button>
+            <button class="filter-btn" data-day="0" onclick="filterDay(0)" style="--btn-color:var(--day1);">Day1 皇城中轴线</button>
+            <button class="filter-btn" data-day="1" onclick="filterDay(1)" style="--btn-color:var(--day2);">Day2 传统文化</button>
+            <button class="filter-btn" data-day="2" onclick="filterDay(2)" style="--btn-color:var(--day3);">Day3 长城远郊</button>
+            <button class="filter-btn" data-day="3" onclick="filterDay(3)" style="--btn-color:var(--day4);">Day4 皇家园林</button>
+            <button class="filter-btn" data-day="4" onclick="filterDay(4)" style="--btn-color:var(--day5);">Day5 休闲购物</button>
+        </div>
+        <div id="map-container"></div>
+        <div class="map-legend">
+            <div class="legend-item"><div class="legend-dot" style="background:var(--day1);"></div>Day1 皇城中轴线</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--day2);"></div>Day2 传统文化体验</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--day3);"></div>Day3 长城远郊游</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--day4);"></div>Day4 皇家园林</div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--day5);"></div>Day5 休闲购物日</div>
+        </div>
+        <div class="map-actions">
+            <a class="map-btn map-btn-primary" href="amapuri://workInAmap/createWithToken?polymericId=mcp_0ead6ffb81b94ebc8214f2ccaeb083a9&from=MCP">
+                &#128205; 在高德地图APP中查看完整行程
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <p>北京五一劳动节旅行攻略 2026</p>
+    <p>北京广播电视台出品 | 数据来源：高德地图</p>
+</footer>
+
+<script src="https://webapi.amap.com/loader.js"></script>
+<script type="text/javascript">
+    window._AMapSecurityConfig = {
+        securityJsCode: "a9fcf72702e0d63caf91dd7cd2029b99",
+    };
+
+    var dayColors = ['#EF4444', '#10B981', '#3B82F6', '#8B5CF6', '#F97316'];
+    var dayLabels = ['Day1', 'Day2', 'Day3', 'Day4', 'Day5'];
+    var attractions = [
+        [
+            { name: '天安门广场', lng: 116.397755, lat: 39.903182 },
+            { name: '故宫博物院', lng: 116.397029, lat: 39.917839 },
+            { name: '景山公园', lng: 116.396551, lat: 39.925875 }
+        ],
+        [
+            { name: '天坛公园', lng: 116.410829, lat: 39.881913 },
+            { name: '南锣鼓巷', lng: 116.403145, lat: 39.936302 },
+            { name: '什刹海', lng: 116.395411, lat: 39.939538 }
+        ],
+        [
+            { name: '八达岭长城', lng: 116.016802, lat: 40.356188 },
+            { name: '明十三陵', lng: 116.235741, lat: 40.280532 },
+            { name: '鸟巢', lng: 116.394931, lat: 39.993758 }
+        ],
+        [
+            { name: '颐和园', lng: 116.275179, lat: 39.999617 },
+            { name: '圆明园', lng: 116.309879, lat: 39.999581 },
+            { name: '恭王府', lng: 116.386442, lat: 39.936428 }
+        ],
+        [
+            { name: '北海公园', lng: 116.391802, lat: 39.928775 },
+            { name: '王府井', lng: 116.411104, lat: 39.916917 },
+            { name: '三里屯太古里', lng: 116.453990, lat: 39.934871 }
+        ]
+    ];
+
+    var mapInstance = null;
+    var dayMarkers = [[], [], [], [], []];
+    var dayPolylines = [null, null, null, null, null];
+
+    function filterDay(dayIdx) {
+        document.querySelectorAll('.filter-btn').forEach(function(btn) { btn.classList.remove('active'); });
+        document.querySelector('.filter-btn[data-day="' + dayIdx + '"]').classList.add('active');
+
+        for (var i = 0; i < 5; i++) {
+            var show = (dayIdx === -1 || dayIdx === i);
+            dayMarkers[i].forEach(function(m) { show ? m.show() : m.hide(); });
+            if (dayPolylines[i]) { show ? dayPolylines[i].show() : dayPolylines[i].hide(); }
+        }
+
+        if (mapInstance) {
+            if (dayIdx === -1) {
+                mapInstance.setFitView(null, false, [40, 40, 40, 40]);
+            } else {
+                var visible = dayMarkers[dayIdx].concat(dayPolylines[dayIdx] ? [dayPolylines[dayIdx]] : []);
+                mapInstance.setFitView(visible, false, [60, 60, 60, 60]);
+            }
+        }
+    }
+
+    AMapLoader.load({
+        key: "89edd888bc8c6fc70b3d9069611d961e",
+        version: "2.0",
+        plugins: ["AMap.Scale"],
+        AMapUI: {
+            version: "1.1",
+            plugins: ["overlay/SimpleMarker"]
+        },
+        Loca: {
+            version: "2.0"
+        }
+    }).then(function(AMap) {
+        var map = new AMap.Map('map-container', {
+            zoom: 10,
+            center: [116.397428, 39.90923],
+            mapStyle: 'amap://styles/whitesmoke'
+        });
+        map.addControl(new AMap.Scale());
+        mapInstance = map;
+
+        attractions.forEach(function(daySpots, dayIdx) {
+            var color = dayColors[dayIdx];
+            var pathCoords = [];
+
+            daySpots.forEach(function(spot, spotIdx) {
+                var pos = new AMap.LngLat(spot.lng, spot.lat);
+                pathCoords.push(pos);
+
+                var markerContent = document.createElement('div');
+                markerContent.style.cssText = 'display:flex;flex-direction:column;align-items:center;';
+
+                var dot = document.createElement('div');
+                dot.style.cssText = 'width:28px;height:28px;border-radius:50%;background:' + color +
+                    ';color:white;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;' +
+                    'box-shadow:0 2px 8px rgba(0,0,0,0.25);border:2px solid white;';
+                dot.textContent = (spotIdx + 1);
+
+                var label = document.createElement('div');
+                label.style.cssText = 'background:white;padding:2px 8px;border-radius:4px;font-size:11px;' +
+                    'margin-top:4px;box-shadow:0 1px 4px rgba(0,0,0,0.15);white-space:nowrap;font-weight:500;color:#1E293B;';
+                label.textContent = spot.name;
+
+                markerContent.appendChild(dot);
+                markerContent.appendChild(label);
+
+                var marker = new AMap.Marker({
+                    position: pos,
+                    content: markerContent,
+                    offset: new AMap.Pixel(-14, -14),
+                    map: map
+                });
+                dayMarkers[dayIdx].push(marker);
+            });
+
+            var polyline = new AMap.Polyline({
+                path: pathCoords,
+                strokeColor: color,
+                strokeWeight: 4,
+                strokeOpacity: 0.8,
+                strokeStyle: 'solid',
+                lineJoin: 'round',
+                lineCap: 'round',
+                showDir: true,
+                map: map
+            });
+            dayPolylines[dayIdx] = polyline;
+        });
+
+        map.setFitView(null, false, [40, 40, 40, 40]);
+    }).catch(function(e) {
+        console.error(e);
+        document.getElementById('map-container').innerHTML =
+            '<div class="map-error">' +
+            '<div><p style="font-size:1.2rem;margin-bottom:8px;">&#128506; 地图加载失败</p>' +
+            '<p>错误信息：' + (e.message || e) + '</p>' +
+            '<p style="margin-top:12px;"><a href="amapuri://workInAmap/createWithToken?polymericId=mcp_0ead6ffb81b94ebc8214f2ccaeb083a9&from=MCP" style="color:#2563EB;">点击在高德地图APP中查看完整行程</a></p></div>' +
+            '</div>';
+    });
+</script>
+</body>
+</html>
